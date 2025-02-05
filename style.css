@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#heroes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#heroes li {
+    margin-bottom: 10px;
+}
+
+#heroes li a {
+    text-decoration: none;
+    color: #337ab7;
+}
+
+#heroes li a:hover {
+    color: #23527c;
+}
+
+#counter-heroes {
+    margin-top: 20px;
+}
