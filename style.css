@@ -24,3 +24,33 @@ body {
 #counter-heroes {
     margin-top: 20px;
 }
+
+/* Media query for mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    #heroes li {
+        margin-bottom: 5px; /* Reduce margin for smaller screens */
+    }
+    
+    #heroes li a {
+        font-size: 16px; /* Adjust font size for better readability on mobile */
+    }
+    
+    #counter-heroes {
+        margin-top: 10px; /* Reduce margin for smaller screens */
+    }
+}
+
+/* Media query for extra small mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    #heroes li {
+        margin-bottom: 2px; /* Further reduce margin for extra small screens */
+    }
+    
+    #heroes li a {
+        font-size: 14px; /* Adjust font size for better readability on extra small mobile devices */
+    }
+    
+    #counter-heroes {
+        margin-top: 5px; /* Further reduce margin for extra small screens */
+    }
+}
