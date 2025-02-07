@@ -1,10 +1,9 @@
 // Data for heroes and their counter heroes
 const heroesData = {
-    "Batman": ["Joker", "Penguin", "Riddler"],
-    "Superman": ["Lex Luthor", "General Zod", "Bizarro"],
-    "Wonder Woman": ["Ares", "Circe", "Doctor Psycho"],
-    "Iron Man": ["Ultron", "Thanos", "Justin Hammer"],
-    "Captain America": ["Red Skull", "Hydra", "Winter Soldier"]
+    "Hylos": ["Fanny", "Natalia", "Eudora", "Sun", "Odette", "Karrie", "Valir", "Alpha", "Grock", "Akai", "Franco"],
+    "Layla": ["Natalia", "Fanny", "Hayabusa", "Lancelot", "Gusion", "Miya", "Harley", "Kagura", "Lunox", "Vexana", "Cecilion", "Claude", "Zilong"],
+    "Miya": ["Natalia", "Alucard", "Clint", "Layla", "Eudora", "Zilong", "Saber", "Lancelot", "Kaja", "Hayabusa", "Jawhead", "Chou", "Hanzo"],
+    "Fanny": ["Claude", "Granger", "Lesley", "Hilda", "Alucard", "Cecilion", "Valir", "Yi Sun-shin", "Ling", "Helcurt", "Atlas", "Grock", "Johnson"]
 };
 
 // Get the heroes list and counter heroes div
