@@ -13,7 +13,8 @@ const heroesData = {
     "Zhask": ["Eudora","Helcurt","Akai","Cecilion","Claude","Lancelot","Fanny","Joy","Nolan","Paquito","Xavier","Vale","Belerick","Saber","Kagura","Nana","Aurora","Pharsa","Luo Yi","Valir","Guinivere","Bane","Silvanna","Hilda","Lylia"],
     "Badang": ["Wanwan","Chou","Khaleed","Yu Zhong","Kimmy","Hanzo","Hanabi","Helcurt","Odette","Silvanna","Franco","Ruby","Minsitthar","Kaja","Lunox","Khufra","Aldous","Benedetta"],
     "Terizla": ["Valir", "Guinevere","Karrie","Silvanna","Franco","Ruby","Minsitthar","Kaja","Dyroth"],
-    "Julian": ["Aamon", "Edith", "Pacquito"]
+    "Julian": ["Aamon", "Edith", "Pacquito"],
+    "Freya": ["Phoveus", "Wanwan", "Minsitthar","Esmeralda","Kaja"]
 };
 
 // Get the heroes list and counter heroes div
