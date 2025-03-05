@@ -11,7 +11,8 @@ const heroesData = {
     "Carmilla": ["Lunox","Baxia","Claude","Kaja","Karrie","Pharsa","Chou","Wanwan","Hanabi"],
     "Xborg": ["Esmeralda","Chou","Gloo","Baxia","Franco","Nana","Granger","Khufra","Kimmy","Lesley","Alpha","Gusion","Pharsa","Guinevere","Silvanna","Ruby","Minsitthar","Kaja","Yi-Sun-Shin","Ling","Atlas","Gatotkaca","Uranus","Lancelot","Balmond","Lunox","Hayabusa"],
     "Zhask": ["Eudora","Helcurt","Akai","Cecilion","Claude","Lancelot","Fanny","Joy","Nolan","Paquito","Xavier","Vale","Belerick","Saber","Kagura","Nana","Aurora","Pharsa","Luo Yi","Valir","Guinivere","Bane","Silvanna","Hilda","Lylia"],
-    "Badang": ["Wanwan","Chou","Khaleed","Yu Zhong","Kimmy","Hanzo","Hanabi","Helcurt","Odette","Silvanna","Franco","Ruby","Minsitthar","Kaja","Lunox","Khufra","Aldous"],
+    "Badang": ["Wanwan","Chou","Khaleed","Yu Zhong","Kimmy","Hanzo","Hanabi","Helcurt","Odette","Silvanna","Franco","Ruby","Minsitthar","Kaja","Lunox","Khufra","Aldous","Benedetta"],
+    "Terizla": ["Valir", "Guinevere","Karrie","Silvanna","Franco","Ruby","Minsitthar","Kaja","Dyroth"],
     "Julian": ["Aamon", "Edith", "Pacquito"]
 };
 
@@ -29,6 +30,9 @@ heroesList.addEventListener("click", (e) => {
         // Display the counter heroes
         counterHeroesDiv.innerHTML = "";
         if (counterHeroes) {
+            // Sort the counter heroes alphabetically
+            counterHeroes.sort((a, b) => a.localeCompare(b));
+            
             counterHeroesDiv.innerHTML = `<h2>Counter Heroes for ${hero}:</h2><ul>${counterHeroes.map((counterHero) => `<li>${counterHero}</li>`).join("")}</ul>`;
         } else {
             counterHeroesDiv.innerHTML = `<p>No counter heroes found for ${hero}.</p>`;
