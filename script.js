@@ -12,9 +12,16 @@ const heroesData = {
     "Xborg": ["Esmeralda","Chou","Gloo","Baxia","Franco","Nana","Granger","Khufra","Kimmy","Lesley","Alpha","Gusion","Pharsa","Guinevere","Silvanna","Ruby","Minsitthar","Kaja","Yi-Sun-Shin","Ling","Atlas","Gatotkaca","Uranus","Lancelot","Balmond","Lunox","Hayabusa"],
     "Zhask": ["Eudora","Helcurt","Akai","Cecilion","Claude","Lancelot","Fanny","Joy","Nolan","Paquito","Xavier","Vale","Belerick","Saber","Kagura","Nana","Aurora","Pharsa","Luo Yi","Valir","Guinivere","Bane","Silvanna","Hilda","Lylia"],
     "Badang": ["Wanwan","Chou","Khaleed","Yu Zhong","Kimmy","Hanzo","Hanabi","Helcurt","Odette","Silvanna","Franco","Ruby","Minsitthar","Kaja","Lunox","Khufra","Aldous","Benedetta"],
-    "Terizla": ["Valir", "Guinevere","Karrie","Silvanna","Franco","Ruby","Minsitthar","Kaja","Dyroth"],
+    "Terizla": ["Valir", "Guinevere","Karrie","Silvanna","Franco","Ruby","Minsitthar","Kaja","Dyroth","Xborg"],
     "Julian": ["Aamon", "Edith", "Pacquito"],
-    "Freya": ["Phoveus", "Wanwan", "Minsitthar","Esmeralda","Kaja"]
+    "Freya": ["Phoveus", "Wanwan", "Minsitthar","Esmeralda","Kaja"],
+    "Popol and Kupa": ["Clint","Kagura","Kimmy","Wanwan","Saber", "Melissa"],
+    "Beatrix": ["Natalia","Clint","Lancelot","Chou","Jawhead","Brody"],
+    "Clint": ["Beatrix","Lancelot","Natalia","Chou","Jawhead","Ling","Gusion","Hayabusa","Popol and Kupa","Yve"],
+    "Valir": ["Beatrix","Lancelot","Natalia","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Kagura","Lloyd"],
+    "Claude": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Leslie"],
+    "Harley": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Saber"],
+    "Leslie": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Clint"]
 };
 
 // Get the heroes list and counter heroes div
