@@ -22,8 +22,8 @@ const heroesData = {
     "Claude": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Leslie"],
     "Harley": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Saber"],
     "Leslie": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Clint"],
-    "Akai": ["Leslie"],
-    "Franco": ["Leslie"]
+    "Akai": ["Leslie","Gord", "Nana", "Clint", "Zilong", "Alice", "Baxia", "Valira", "Claude"],
+    "Franco": ["Leslie","Ling", "Gusion", "Hilda", "Lancelot", "Lapu Lapu", "Natalia", "Wanwan", "Yve"]
 };
 
 // Get the heroes list and counter heroes div
