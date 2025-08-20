@@ -1,53 +1,86 @@
-// Data for heroes and their counter heroes
-const heroesData = {
-    "Hylos": ["Fanny", "Natalia", "Eudora", "Sun", "Odette", "Karrie", "Valir", "Alpha", "Grock", "Akai", "Franco","Leslie"],
-    "Layla": ["Natalia", "Fanny", "Hayabusa", "Lancelot", "Gusion", "Miya", "Harley", "Kagura", "Lunox", "Vexana", "Cecilion", "Claude", "Zilong"],
-    "Miya": ["Natalia", "Alucard", "Clint", "Layla", "Eudora", "Zilong", "Saber", "Lancelot", "Kaja", "Hayabusa", "Jawhead", "Chou", "Hanzo"],
-    "Fanny": ["Claude", "Granger", "Lesley", "Hilda", "Alucard", "Cecilion", "Valir", "Yi Sun-shin", "Ling", "Helcurt", "Atlas", "Grock", "Johnson"],
-    "Gatotkaca": ["Silvanna","Franco","Ruby","Minsitthar","Kaja","Alpha","Lunox","Karrie","Hayabusa","Natalia","Miya","Sun","Balmond","Bruno","Layla","Eudora","Vale","Nana","Aurora","Uranus","Dyrroth","Thamuz","Freya","X-Borg","Yin","Leslie"],
-    "Belerick": ["Valir","Karrie", "Dyrroth", "Thamuz", "Fanny", "Uranus", "Carmilla", "Angela", "Floryn", "Freya", "Sun", "Alpha", "Minsitthar", "Saber","Leslie"],
-    "Melissa": ["Moskov","Franco","Yve","Aurora","Saber","Lancelot","Yu Zhong","Eudora","Chou","Brody","Claude","Clint","Lesley","Hayabusa","X.Borg"],
-    "Cecilion": ["Chou","Gusion","Harley","Hayabusa","Helcurt","Aldous","Lancelot","Kufra","Lesley","Natalia"],
-    "Carmilla": ["Lunox","Baxia","Claude","Kaja","Karrie","Pharsa","Chou","Wanwan","Hanabi","Leslie"],
-    "Xborg": ["Esmeralda","Chou","Gloo","Baxia","Franco","Nana","Granger","Khufra","Kimmy","Lesley","Alpha","Gusion","Pharsa","Guinevere","Silvanna","Ruby","Minsitthar","Kaja","Yi-Sun-Shin","Ling","Atlas","Gatotkaca","Uranus","Lancelot","Balmond","Lunox","Hayabusa"],
-    "Zhask": ["Eudora","Helcurt","Akai","Cecilion","Claude","Lancelot","Fanny","Joy","Nolan","Paquito","Xavier","Vale","Belerick","Saber","Kagura","Nana","Aurora","Pharsa","Luo Yi","Valir","Guinivere","Bane","Silvanna","Hilda","Lylia"],
-    "Badang": ["Wanwan","Chou","Khaleed","Yu Zhong","Kimmy","Hanzo","Hanabi","Helcurt","Odette","Silvanna","Franco","Ruby","Minsitthar","Kaja","Lunox","Khufra","Aldous","Benedetta"],
-    "Terizla": ["Valir", "Guinevere","Karrie","Silvanna","Franco","Ruby","Minsitthar","Kaja","Dyroth","Xborg","Leslie"],
-    "Julian": ["Aamon", "Edith", "Pacquito"],
-    "Freya": ["Phoveus", "Wanwan", "Minsitthar","Esmeralda","Kaja"],
-    "Popol and Kupa": ["Clint","Kagura","Kimmy","Wanwan","Saber", "Melissa"],
-    "Beatrix": ["Natalia","Clint","Lancelot","Chou","Jawhead","Brody"],
-    "Clint": ["Beatrix","Lancelot","Natalia","Chou","Jawhead","Ling","Gusion","Hayabusa","Popol and Kupa","Yve"],
-    "Valir": ["Beatrix","Lancelot","Natalia","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Kagura","Lloyd"],
-    "Claude": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Leslie"],
-    "Harley": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Saber"],
-    "Leslie": ["Natalia","Lancelot","Chou","Jawhead","Ling","Gusion","Hayabusa","Yve","Beatrix","Lloyd","Kagura","Clint"],
-    "Akai": ["Leslie","Gord", "Nana", "Clint", "Zilong", "Alice", "Baxia", "Valira", "Claude"],
-    "Franco": ["Leslie","Ling", "Gusion", "Hilda", "Lancelot", "Lapu Lapu", "Natalia", "Wanwan", "Yve"],
-    "Alice": ["Karrie", "Claude", "Esmeralda", "Chou", "Franco", "Helcurt", "Natalia", "Diggie", "Baxia", "Valir", "Yu Zhong"],
-    "Dyrroth": ["Saber", "Argus", "Guinevere", "Johnson", "Thamuz", "Paquito", "Yu Zhong", "Martis", "Terizla", "Benedetta", "Freya", "Lapu Lapu", "Ruby", "Alucard"]
+const heroes = [
+    // Exemplary list; retrieve full list and roles from mlbbcounters.com :contentReference[oaicite:1]{index=1}
+    { name: "Aamon", role: "Assassin" },
+    { name: "Akai", role: "Tank" },
+    { name: "Alice", role: "Mage" },
+    { name: "Alpha", role: "Fighter" },
+    { name: "Alucard", role: "Fighter" },
+    { name: "Angela", role: "Support" },
+    // … continue with full roster
+];
+
+const counters = {
+    // Example counter data; ideally sourced and filled per hero
+    Aamon: ["Diggie (Support)", "Vale (Mage)", "Gusion (Assassin)"],
+    Akai: ["Esmeralda (Mage)", "Chou (Fighter)", "Valir (Mage)"],
+    Alice: ["Lolita (Tank)", "Gord (Mage)", "Esmeralda (Mage)"],
+    // … more hero counters
 };
 
-// Get the heroes list and counter heroes div
-const heroesList = document.getElementById("heroes");
-const counterHeroesDiv = document.getElementById("counter-heroes");
+const selected = new Set();
 
-// Add event listener to each hero link
-heroesList.addEventListener("click", (e) => {
-    if (e.target.tagName === "A") {
-        e.preventDefault();
-        const hero = e.target.getAttribute("data-hero");
-        const counterHeroes = heroesData[hero];
-
-        // Display the counter heroes
-        counterHeroesDiv.innerHTML = "";
-        if (counterHeroes) {
-            // Sort the counter heroes alphabetically
-            counterHeroes.sort((a, b) => a.localeCompare(b));
-            
-            counterHeroesDiv.innerHTML = `<h2>Counter Heroes for ${hero}:</h2><ul>${counterHeroes.map((counterHero) => `<li>${counterHero}</li>`).join("")}</ul>`;
-        } else {
-            counterHeroesDiv.innerHTML = `<p>No counter heroes found for ${hero}.</p>`;
+const heroListEl = document.getElementById("hero-list");
+heroes.forEach(hero => {
+    const btn = document.createElement("button");
+    btn.textContent = hero.name;
+    btn.className = "hero-btn";
+    btn.onclick = () => {
+        if (selected.has(hero.name)) {
+            selected.delete(hero.name);
+            btn.classList.remove("selected");
+        } else if (selected.size < 5) {
+            selected.add(hero.name);
+            btn.classList.add("selected");
         }
-    }
+    };
+    heroListEl.appendChild(btn);
 });
+
+document.getElementById("find-btn").onclick = () => {
+    const grouped = {
+        Marksman: new Set(),
+        Fighter: new Set(),
+        Mage: new Set(),
+        Tank: new Set(),
+        Support: new Set(),
+        Assassin: new Set()
+    };
+    selected.forEach(h => {
+        if (counters[h]) {
+            counters[h].forEach(c => {
+                const role = Object.keys(grouped).find(r => c.includes(r)) || "Assassin";
+                grouped[role].add(c);
+            });
+        }
+    });
+    const resEl = document.getElementById("results");
+    resEl.innerHTML = "";
+    for (const [role, set] of Object.entries(grouped)) {
+        const div = document.createElement("div");
+        div.className = "role-group";
+        const title = document.createElement("h2");
+        title.textContent = role;
+        div.appendChild(title);
+        const card = document.createElement("div");
+        card.className = "card";
+        if (set.size) {
+            const ul = document.createElement("ul");
+            set.forEach(c => {
+                const li = document.createElement("li");
+                li.textContent = c;
+                ul.appendChild(li);
+            });
+            card.appendChild(ul);
+        } else {
+            card.textContent = "No counters found";
+        }
+        div.appendChild(card);
+        resEl.appendChild(div);
+    }
+};
+
+// Theme toggle logic
+const themeToggle = document.getElementById("theme-toggle");
+themeToggle.onclick = () => {
+    document.body.dataset.theme = document.body.dataset.theme === "dark" ? "" : "dark";
+};
