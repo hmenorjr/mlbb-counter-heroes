@@ -1,44 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Counter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MLBB Hero Counter Picker</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Heroes and Counter Heroes <a href="https://buymeacoffee.com/hmenorjr" class="button">Donate</a></h1>
-    
-    <ul id="heroes">
-        <li><a href="#" data-hero="Alice">Alice</a></li>
-        <li><a href="#" data-hero="Akai">Akai</a></li>
-        <li><a href="#" data-hero="Badang">Badang</a></li>
-        <li><a href="#" data-hero="Beatrix">Beatrix</a></li>
-        <li><a href="#" data-hero="Belerick">Belerick</a></li>
-        <li><a href="#" data-hero="Carmilla">Carmilla</a></li>
-        <li><a href="#" data-hero="Cecilion">Cecilion</a></li>
-        <li><a href="#" data-hero="Claude">Claude</a></li>
-        <li><a href="#" data-hero="Clint">Clint</a></li>
-        <li><a href="#" data-hero="Dyrroth">Dyrroth</a></li>
-        <li><a href="#" data-hero="Fanny">Fanny</a></li>
-        <li><a href="#" data-hero="Franco">Franco</a></li>
-        <li><a href="#" data-hero="Freya">Freya</a></li>
-        <li><a href="#" data-hero="Gatotkaca">Gatotkaca</a></li>
-        <li><a href="#" data-hero="Harley">Harley</a></li>
-        <li><a href="#" data-hero="Hylos">Hylos</a></li>
-        <li><a href="#" data-hero="Julian">Julian</a></li>
-        <li><a href="#" data-hero="Layla">Layla</a></li>
-        <li><a href="#" data-hero="Leslie">Leslie</a></li>
-        <li><a href="#" data-hero="Melissa">Melissa</a></li>
-        <li><a href="#" data-hero="Miya">Miya</a></li>
-        <li><a href="#" data-hero="Popol and Kupa">Popol and Kupa</a></li>
-        <li><a href="#" data-hero="Terizla">Terizla</a></li>
-        <li><a href="#" data-hero="Valir">Valir</a></li>
-        <li><a href="#" data-hero="Xborg">X-borg</a></li>
-        <li><a href="#" data-hero="Zhask">Zhask</a></li>
-    </ul>
-    <div id="counter-heroes"></div>
+    <div class="container">
+        <h1>MLBB Counter Picker</h1>
+        <p>Select up to 5 enemy heroes</p>
+        <div id="hero-list" class="hero-list"></div>
+        <button id="find-btn" class="btn">Find Counters</button>
+        <div id="results" class="results"></div>
+    </div>
+    <button id="theme-toggle" class="theme-toggle">Toggle Theme</button>
 
     <script src="script.js"></script>
 </body>
+
 </html>
