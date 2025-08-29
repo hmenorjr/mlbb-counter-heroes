@@ -22,7 +22,7 @@ const heroes = [
   { name: "Bruno", lanes: ["GOLD"] },
   { name: "Carmilla", lanes: ["ROAM", "EXP"] },
   { name: "Cecilion", lanes: ["MID"] },
-  { name: "Chang’e", lanes: ["MID", "GOLD"] },
+  { name: "Change", lanes: ["MID", "GOLD"] },
   { name: "Chou", lanes: ["EXP", "ROAM"] },
   { name: "Chip", lanes: ["ROAM"] },
   { name: "Cici", lanes: ["EXP", "GOLD"] },
@@ -116,7 +116,7 @@ const heroes = [
   { name: "Valir", lanes: ["MID"] },
   { name: "Vexana", lanes: ["MID"] },
   { name: "Wanwan", lanes: ["GOLD"] },
-  { name: "X.Borg", lanes: ["EXP", "JUNGLE"] },
+  { name: "XBorg", lanes: ["EXP", "JUNGLE"] },
   { name: "Xavier", lanes: ["MID"] },
   { name: "Yi Sun-shin", lanes: ["JUNGLE", "GOLD"] },
   { name: "Yin", lanes: ["EXP", "JUNGLE"] },
@@ -155,7 +155,7 @@ const countersRaw = {
   Brody:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
   Bruno:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
   Carmilla:     ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
-  Chang’e:      ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Change:      ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
   Cecilion:     ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
   Chou:         ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
   Cici:         ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
@@ -175,6 +175,7 @@ const countersRaw = {
   Fredrinn:     ["Karrie", "Masha", "Dyrroth", "Valir", "Lun"],
   Freya:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lun"],
   Gatotkaca:    ["Karrie", "Masha", "Dyrroth", "Valir", "Lun"],
+  XBorg:    ["Phoveus", "Thamuz", "Yu Zhong", "Valir", "Lunox", "Kadita", "Karrie", "Claude", "Brody", "Karina", "Akai", "Fanny", "Franco", "Atlas", "Khufra"],
 };
  
 
