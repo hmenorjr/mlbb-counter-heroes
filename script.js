@@ -132,12 +132,52 @@ const heroMap = Object.fromEntries(heroes.map(h => [h.name, h]));
 
 // Step 2: Define counters only with names
 const countersRaw = {
-  Aamon: ["Phoveus", "Esmeralda", "Yu Zhong", "Lunox", "Kadita", "Lylia", "Brody", "Popol and Kupa", "Clint", "Akai", "Saber", "Karina", "Angela", "Rafaela", "Mathilda"],
-  Akai: ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
-  Aldous: ["Phoveus", "Thamuz", "Yu Zhong", "Lunox", "Kadita", "Lylia", "Claude", "Karrie", "Moskov", "Karina", "Akai", "Fanny", "Lolita", "Franco", "Khufra"],
-  Alice: ["Esmeralda", "Phoveus", "Yu Zhong", "Valir", "Lunox", "Kadita", "Claude", "Karrie", "Brody", "Gusion", "Saber", "Karina", "Lolita", "Franco", "Khufra"],
-  // … more heroes
+  Aamon:        ["Saber", "Paquito", "X.Borg", "Gusion", "Hayabusa", "Lancelot", "Karina", "Claude", "Moskov", "Karrie", "Angela", "Rafaela", "Mathilda"],
+  Akai:         ["Claude", "Karrie", "Valir", "Masha", "Karina", "Roger", "Diggie", "Khufra"],
+  Aldous:       ["Phoveus", "Thamuz", "Yu Zhong", "Lunox", "Kadita", "Lylia", "Claude", "Karrie", "Moskov", "Karina", "Akai", "Fanny", "Lolita", "Franco", "Khufra"],
+  Alice:        ["Esmeralda", "Phoveus", "Yu Zhong", "Valir", "Lunox", "Kadita", "Claude", "Karrie", "Brody", "Gusion", "Saber", "Karina", "Lolita", "Franco", "Khufra"],
+  Alpha:        ["Phoveus", "Esmeralda", "Thamuz", "Lylia", "Lunox", "Kadita", "Claude", "Brody", "Beatrix", "Fanny", "Ling", "Hayabusa", "Franco", "Kaja", "Atlas"],
+  Alucard:      ["Yu Zhong", "Thamuz", "Esmeralda", "Valir", "Kadita", "Lylia", "Claude", "Wanwan", "Brody", "Ling", "Fanny", "Karina", "Atlas", "Khufra", "Franco"],
+  Angela:       ["Esmeralda", "Phoveus", "Yu Zhong", "Kadita", "Vale", "Eudora", "Melissa", "Brody", "Beatrix", "Saber", "Karina", "Gusion", "Franco", "Atlas", "Khufra"],
+  Argus:        ["Phoveus", "Esmeralda", "Thamuz", "Valir", "Lunox", "Kadita", "Claude", "Karrie", "Brody", "Karina", "Akai", "Fanny", "Franco", "Kaja", "Atlas"],
+  Arlott:       ["Esmeralda", "Phoveus", "Yu Zhong", "Valir", "Lunox", "Kadita", "Claude", "Brody", "Melissa", "Karina", "Ling", "Gusion", "Franco", "Atlas", "Khufra"],
+  Atlas:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Kadita", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Lolita"],
+  Aulus:        ["Phoveus", "Yu Zhong", "Thamuz", "Valir", "Lylia", "Kadita", "Claude", "Karrie", "Brody", "Fanny", "Ling", "Akai", "Franco", "Atlas"],
+  Aurora:       ["Esmeralda", "Phoveus", "Yu Zhong", "Kadita", "Lunox", "Kagura", "Claude", "Brody", "Beatrix", "Gusion", "Ling", "Hayabusa", "Diggie", "Franco", "Atlas"],
+  Badang:       ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Balmond:      ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Bane:         ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Barats:       ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Baxia:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Beatrix:      ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Belerick:     ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Benedetta:    ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Brody:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Bruno:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Carmilla:     ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Chang’e:      ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Cecilion:     ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Chou:         ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Cici:         ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Claude:       ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Clint:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Cyclops:      ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Diggie:       ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Dyrroth:      ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Edith:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Esmeralda:    ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Estes:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Eudora:       ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Fanny:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Faramis:      ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Floryn:       ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Franco:       ["Karrie", "Masha", "Dyrroth", "Valir", "Lunox", "Cecilion", "Claude", "Moskov", "Karina", "Roger", "Diggie", "Khufra"],
+  Fredrinn:     ["Karrie", "Masha", "Dyrroth", "Valir", "Lun"],
+  Freya:        ["Karrie", "Masha", "Dyrroth", "Valir", "Lun"],
+  Gatotkaca:    ["Karrie", "Masha", "Dyrroth", "Valir", "Lun"],
 };
+ 
+
 
 // Step 3: Convert raw names to full hero objects
 const counters = Object.fromEntries(
