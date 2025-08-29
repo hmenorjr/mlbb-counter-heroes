@@ -252,9 +252,3 @@ document.getElementById("find-btn").onclick = () => {
         resEl.appendChild(div);
     }
 };
-
-// Theme toggle logic
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.onclick = () => {
-    document.body.dataset.theme = document.body.dataset.theme === "dark" ? "" : "dark";
-};
