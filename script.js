@@ -130,9 +130,27 @@ const heroes = [
 // Explicit counter structure
 const counters = {
     Aamon: [
-        { name: "Diggie", lanes: ["ROAM"] },
-        { name: "Vale", lanes: ["MID"] },
-        { name: "Gusion", lanes: ["JUNGLE", "MID"] }
+        // EXP
+        { name: "Phoveus", lanes: ["EXP"] },
+        { name: "Esmeralda", lanes: ["EXP"] },
+        { name: "Yu Zhong", lanes: ["EXP"] },
+        // MID
+        { name: "Lunox", lanes: ["MID"] },
+        { name: "Kadita", lanes: ["MID"] },
+        { name: "Lylia", lanes: ["MID"] },
+        // GOLD
+        { name: "Brody", lanes: ["GOLD"] },
+        { name: "Popol and Kupa", lanes: ["GOLD", "JUNGLE"] },
+        { name: "Clint", lanes: ["GOLD"] },
+        // JUNGLE
+        { name: "Akai", lanes: ["JUNGLE", "ROAM"] },
+        { name: "Saber", lanes: ["JUNGLE", "ROAM"] },
+        { name: "Karina", lanes: ["JUNGLE"] },
+        // ROAM
+        { name: "Angela", lanes: ["ROAM"] },
+        { name: "Rafaela", lanes: ["ROAM"] },
+        { name: "Mathilda", lanes: ["ROAM"] },
+        { name: "Akai", lanes: ["JUNGLE", "ROAM"] },
     ],
     Akai: [
         { name: "Esmeralda", lanes: ["EXP"] },
